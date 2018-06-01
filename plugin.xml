@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.qiyue.jia.plugin.sendmessage" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>send</name>
+    <js-module name="send" src="www/sendMessage.js">
+        <clobbers target="send" />
+    </js-module>
+	
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+		  <feature name="send">
+			<param name="android-package" value="com.qiyue.jia.sendmessage.SendMessagePlugin"/>
+		  </feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/*">
+			<uses-permission android:name="android.permission.SEND_SMS" />
+		</config-file>
+	
+		<framework src="com.mylhyl:acp:1.1.6" />
+		<source-file src="src/android/SendMessagePlugin.java" target-dir="src/com/qiyue/jia/sendmessage"/>
+	</platform>
+	
+</plugin>
