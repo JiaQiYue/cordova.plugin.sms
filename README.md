@@ -1,8 +1,6 @@
 # cordova.plugin.sms
 
-
 var args = new Array("phoneNumber","message");
-
 
 send.sendMessage(args,function (success) {
 
