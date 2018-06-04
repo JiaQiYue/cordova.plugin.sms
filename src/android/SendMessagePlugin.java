@@ -57,7 +57,7 @@ public class SendMessagePlugin extends CordovaPlugin {
 
     //获取发送短信的权限
     Acp.getInstance(cordova.getActivity()).request(new AcpOptions.Builder().setPermissions(
-      Manifest.permission.SEND_SMS).build(),
+      Manifest.permission.READ_PHONE_STATE, Manifest.permission.SEND_SMS).build(),
       new AcpListener() {
         @Override
         public void onGranted() {
