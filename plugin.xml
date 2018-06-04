@@ -14,6 +14,7 @@
 
 		<config-file target="AndroidManifest.xml" parent="/*">
 			<uses-permission android:name="android.permission.SEND_SMS" />
+			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 		</config-file>
 	
 		<framework src="com.mylhyl:acp:1.1.6" />
